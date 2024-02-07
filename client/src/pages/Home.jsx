@@ -20,7 +20,7 @@ const Home = () => {
             <img
               src="./brat.png"
               alt="logo"
-              className="w-20 h-20 object-contain"
+              className="w-30 h-20 object-contain"
             />
           </motion.header>
 
@@ -28,7 +28,8 @@ const Home = () => {
             <motion.div {...headTextAnimation}>
               <h1 className="head-text">
                 {" "}
-                LET'S <br className="xl:block hidden" /> DO IT
+                LET'S <br className="xl:block hidden" />
+                DO IT
               </h1>
             </motion.div>
             <motion.div
