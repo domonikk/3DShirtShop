@@ -3,17 +3,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useSnapshot } from "valtio";
 import config from "../config/config";
 import state from "../store/index";
-import { download } from "../assets/index";
-import { downloadCanvasToImage, reader } from "../config/helpers";
 import { EditorTabs, FilterTabs, DecalTypes } from "../config/constants";
 import { fadeAnimation, slideAnimation } from "../config/motion";
-import {
-  AIPicker,
-  ColorPicker,
-  CustomButton,
-  FilePicker,
-  Tab,
-} from "../components/index";
+import { ColorPicker, CustomButton, Tab } from "../components/index";
 
 const Customizer = () => {
   const snap = useSnapshot(state);
@@ -21,7 +13,10 @@ const Customizer = () => {
   const [activeEditorTab, setActiveEditorTab] = useState("");
   const [activeFilterTab, setActiveFilterTab] = useState({
     logoShirt: true,
+    logoShirt2: false,
     stylishShirt: false,
+    stylishShirt2: false,
+    stylishShirt3: false,
   });
 
   //show tab content on active tab
@@ -29,8 +24,6 @@ const Customizer = () => {
     switch (activeEditorTab) {
       case "colorpicker":
         return <ColorPicker />;
-      default:
-        return null;
     }
   };
 
@@ -39,12 +32,24 @@ const Customizer = () => {
       case "logoShirt":
         state.isLogoTexture = !activeFilterTab[tabName];
         break;
+      case "logoShirt2":
+        state.isLogoTexture2 = !activeFilterTab[tabName];
+        break;
       case "stylishShirt":
         state.isFullTexture = !activeFilterTab[tabName];
         break;
+      case "stylishShirt2":
+        state.isFullTexture2 = !activeFilterTab[tabName];
+        break;
+      case "stylishShirt3":
+        state.isFullTexture3 = !activeFilterTab[tabName];
+        break;
       default:
         state.isLogoTexture = true;
+        state.isLogoTexture2 = false;
         state.isFullTexture = false;
+        state.isFullTexture2 = false;
+        state.isFullTexture3 = false;
         break;
     }
 
@@ -73,7 +78,9 @@ const Customizer = () => {
                   <Tab
                     key={tab.name}
                     tab={tab}
-                    handleClick={() => setActiveEditorTab(tab.name)}
+                    handleClick={() => {
+                      setActiveEditorTab(tab.name);
+                    }}
                   />
                 ))}
                 {generateTabContent()}

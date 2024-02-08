@@ -13,11 +13,9 @@ const CanvasMode = () => {
       gl={{ preserveDrawingBuffer: true }}
       className="w-full max-w-full h-full transition-all ease-in"
     >
-      <ambientLight intensity={0.6} />
       <Environment preset="city" />
 
       <CameraRig>
-        <Backdrop />
         <Center>
           <Shirt />
         </Center>

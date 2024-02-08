@@ -16,31 +16,24 @@ const Home = () => {
     <AnimatePresence>
       {snap.intro && (
         <motion.section className="home" {...slideAnimation("left")}>
-          <motion.header {...slideAnimation("down")}>
-            <img
-              src="./brat.png"
-              alt="logo"
-              className="w-30 h-20 object-contain"
-            />
-          </motion.header>
-
           <motion.div className="home-content" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
-              <h1 className="head-text">
-                {" "}
-                LET'S <br className="xl:block hidden" />
-                DO IT
-              </h1>
+              <img
+                src="./festival.png"
+                alt="logo"
+                className="max-w-xs items-center md:max-w-lg sm:max-w-20"
+              />
             </motion.div>
             <motion.div
               {...headContentAnimation}
               className="flex flex-col gap-5"
             >
-              <p className="max-w-md font-normal text-gray-600 text-base">
-                Create your unique and exclusive shirt with our brand-new 3D
-                customization tool. <strong>Unleash yoiur imagination</strong>
+              <p className="max-w-md font-normal text-lime-950 text-base">
+                Create your unique and exclusive shirt for the Lost In Time
+                Festival with our 3D customization tool.{" "}
+                <strong>Unleash yoiur imagination</strong>
                 {""}
-                and define your style.
+                and get lost in style.
               </p>
               <CustomButton
                 type="filled"
