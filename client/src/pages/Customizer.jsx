@@ -9,7 +9,6 @@ import { ColorPicker, CustomButton, Tab } from "../components/index";
 
 const Customizer = () => {
   const snap = useSnapshot(state);
-
   const [activeEditorTab, setActiveEditorTab] = useState("");
   const [activeFilterTab, setActiveFilterTab] = useState({
     logoShirt: true,

@@ -1,4 +1,5 @@
 import swatch from "./swatch.png";
+import close from "./close.png";
 import download from "./download.png";
 import logoShirt2 from "./logoShirt2.png";
 import logoShirt from "./logo-tshirt.png";
@@ -14,4 +15,5 @@ export {
   stylishShirt2,
   stylishShirt3,
   logoShirt2,
+  close,
 };

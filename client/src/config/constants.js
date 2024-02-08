@@ -1,4 +1,5 @@
 import {
+  close,
   swatch,
   logoShirt,
   stylishShirt,
@@ -11,6 +12,10 @@ export const EditorTabs = [
   {
     name: "colorpicker",
     icon: swatch,
+  },
+  {
+    name: "close",
+    icon: close,
   },
 ];
 
