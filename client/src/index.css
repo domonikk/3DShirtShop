@@ -18,7 +18,7 @@ html {
 
 .app {
   @apply relative w-full h-screen overflow-hidden;
-  background-image: url("./fest-drop.gif");
+
   background-repeat: no-repeat, repeat;
   background-size: cover;
 }

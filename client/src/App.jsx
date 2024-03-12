@@ -4,7 +4,10 @@ import Canvas from "./canvas/index";
 
 function App() {
   return (
-    <main className="app transition-all ease-in">
+    <main
+      className="app transition-all ease-in"
+      style={{ backgroundImage: `url('${"./fest-drop.gif"}')` }}
+    >
       <Home />
       <Customizer />
       <Canvas />
